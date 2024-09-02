@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevent body from scrolling */
+}
+
+h1,
+h2 {
+  color: #333;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.landing-page,
+.level-selection,
+.game-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.landing-page.active,
+.level-selection.active,
+.game-container.active {
+  display: flex;
+}
+
+.menu-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.menu button {
+  display: block;
+  margin: 5px 0;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.play-button {
+  background-color: #28a745;
+  color: #fff;
+  font-size: 18px;
+}
+
+.level-info {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.option {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.option:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  font-size: 16px;
+  margin-top: 15px;
+  height: 20px; /* Keep space consistent for messages */
+  text-align: center;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 300px; /* Adjust this height to control the visible area */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.levels button {
+  width: 90%; /* Make buttons full width */
+  max-width: 300px;
+  margin: 5px 0;
+  background-color: #ccc;
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+}
+
+.levels button.unlocked {
+  background-color: #28a745;
+}

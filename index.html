@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question and Answer Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Menu Bar -->
+    <div class="menu-bar" onclick="toggleMenu()">☰</div>
+    <div class="menu">
+      <button onclick="toggleSound()">Sound: On</button>
+      <button onclick="showAbout()">About</button>
+      <button onclick="shareGame()">Share</button>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landingPage" class="landing-page active">
+      <h1>Welcome to the Game!</h1>
+      <button class="play-button" onclick="startGameFromLanding()">Play</button>
+    </div>
+
+    <!-- Level Selection Page -->
+    <div id="levelSelectionPage" class="level-selection">
+      <h2>Select Level</h2>
+      <div id="levels" class="levels"></div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="gameContainer" class="game-container">
+      <h2 id="levelInfo">Level Info</h2>
+      <div id="question" class="question">Question will be here</div>
+      <div id="options" class="options"></div>
+      <div id="message" class="message"></div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
